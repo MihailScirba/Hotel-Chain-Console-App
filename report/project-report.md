@@ -8,6 +8,10 @@
 
 ### **1. [Introduction](#introduction)**
 
+### **2. [Project objective](#2-project-objective)**
+
+### **3. [Project scopes](#project-scope)
+
 ## Introduction
 
 >Bellow is the "Hotel Chain" Console Application used for its management. Hotel chain has a few branches, each branch can include one or more hotels. Each hotels has an amount of rooms with different comfort levels like "standard", "semi-luxury" or "luxury". As well, like any hotel, it has clients who want to offer a room for a certain period. Of course they can do it. Here is no used database intergration, therefore here are used Java I/O for reading data from txt files, but only is read. Data is not writting in files. They include starting data for being able to interact with the program and execute all provided options. All data is stored by Java Collections Framework. For more detailed description keep reading the whole report or navigate to the code.
