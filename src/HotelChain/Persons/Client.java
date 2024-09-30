@@ -13,14 +13,16 @@ public class Client extends Person {
         this.phoneNumber = "not specified";
     }
 
-    public Client(String firstName, String lastName, String personalCode, String phoneNumber) {
+    public Client(String firstName, String lastName, String personalCode,
+                  String phoneNumber) {
         this.firstName = firstName;
         this.lastName = lastName;
         this.personalCode = personalCode;
         this.phoneNumber = phoneNumber;
     }
 
-    public Client(String firstName, String lastName, String personalCode, String homeAddress, String phoneNumber) {
+    public Client(String firstName, String lastName, String personalCode,
+                  String homeAddress, String phoneNumber) {
         this.firstName = firstName;
         this.lastName = lastName;
         this.personalCode = personalCode;

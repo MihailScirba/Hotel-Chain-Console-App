@@ -3,6 +3,8 @@ package HotelChain.Hotel;
 import java.util.ArrayList;
 import java.util.List;
 
+import HotelChain.Interfaces.ConsoleFunctional;
+
 public class Branch {
     private String name;
     private String address;
@@ -23,7 +25,8 @@ public class Branch {
         this.hotels = new ArrayList<>();
     }
 
-    public Branch(String name, String address, String phoneNumber, List<Hotel> hotels) {
+    public Branch(String name, String address, String phoneNumber,
+                  List<Hotel> hotels) {
         this.name = name;
         this.address = address;
         this.phoneNumber = phoneNumber;
@@ -64,11 +67,14 @@ public class Branch {
 
     @Override
     public String toString() {
-        return "Branch{" +
-                "name='" + name + '\'' +
-                ", address='" + address + '\'' +
-                ", phoneNumber='" + phoneNumber + '\'' +
-                ", numberOfHotels=" + hotels.size() +
-                '}';
+        return "Branch => "
+                + ConsoleFunctional.GREEN_BOLD_BRIGHT + "name = "
+                + ConsoleFunctional.RESET + "{" + name + "}, "
+                + ConsoleFunctional.GREEN_BOLD_BRIGHT + "address = "
+                + ConsoleFunctional.RESET + "{" + address + "}, "
+                + ConsoleFunctional.GREEN_BOLD_BRIGHT + "phoneNumber = "
+                + ConsoleFunctional.RESET + "{" + phoneNumber + "}, "
+                + ConsoleFunctional.GREEN_BOLD_BRIGHT + "numberOfHotels = "
+                + ConsoleFunctional.RESET + "{" + hotels.size() + "}";
     }
 }

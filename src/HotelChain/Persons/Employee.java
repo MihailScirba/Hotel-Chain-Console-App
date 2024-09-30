@@ -1,5 +1,7 @@
 package HotelChain.Persons;
 
+import HotelChain.Interfaces.ConsoleFunctional;
+
 public class Employee extends Person {
     private String function;
     private int salary;
@@ -13,15 +15,17 @@ public class Employee extends Person {
         this.salary = 0;
     }
 
-    public Employee(String firstName, String lastName, String personalCode, String phoneNumber) {
+    public Employee(String firstName, String lastName, String personalCode,
+                    String phoneNumber) {
         this.firstName = firstName;
         this.lastName = lastName;
         this.personalCode = personalCode;
         this.phoneNumber = phoneNumber;
     }
 
-    public Employee(String firstName, String lastName, String personalCode, String homeAddress,
-                    String phoneNumber, String function, int salary) {
+    public Employee(String firstName, String lastName, String personalCode,
+                    String homeAddress, String phoneNumber, String function,
+                    int salary) {
         this.firstName = firstName;
         this.lastName = lastName;
         this.personalCode = personalCode;
@@ -94,14 +98,18 @@ public class Employee extends Person {
 
     @Override
     public String toString() {
-        return "Employee{" +
-                "firstName='" + firstName + '\'' +
-                ", lastName='" + lastName + '\'' +
-                ", personalCode='" + personalCode + '\'' +
-                ", homeAddress='" + homeAddress + '\'' +
-                ", phoneNumber='" + phoneNumber + '\'' +
-                ", function='" + function + '\'' +
-                ", salary=" + salary +
-                '}';
+        return "Employee => "
+                + ConsoleFunctional.GREEN_BOLD_BRIGHT + "firstname = "
+                + ConsoleFunctional.RESET + "{" + firstName + "}, "
+                + ConsoleFunctional.GREEN_BOLD_BRIGHT + "lastName = "
+                + ConsoleFunctional.RESET + "{" + lastName + "}, "
+                + ConsoleFunctional.GREEN_BOLD_BRIGHT + "personal code = "
+                + ConsoleFunctional.RESET + "{" + personalCode + "}, "
+                + ConsoleFunctional.GREEN_BOLD_BRIGHT + "phone number = "
+                + ConsoleFunctional.RESET + "{" + phoneNumber + "}, "
+                + ConsoleFunctional.GREEN_BOLD_BRIGHT + "function = "
+                + ConsoleFunctional.RESET + "{" + function + "}, "
+                + ConsoleFunctional.GREEN_BOLD_BRIGHT + "salary = "
+                + ConsoleFunctional.RESET + "{" + salary + "}";
     }
 }

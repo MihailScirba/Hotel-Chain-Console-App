@@ -110,15 +110,17 @@ public class HotelChain implements Menu {
                     System.out.println("You have finished successfully");
                     return false;
                 }
-                case 1 -> System.out.println(branches.toString().replace("},", "}\n"));
-                case 2 -> System.out.println(hotels.toString().replace("},", "}\n"));
-                case 3 -> System.out.println(hotelRooms.toString().replace("},", "}\n"));
-                case 4 -> System.out.println(clients.toString().replace("},", "}\n"));
-                case 5 -> System.out.println(employees.toString().replace("},", "}\n"));
+                case 1 -> branches.forEach(System.out::println);
+                case 2 -> hotels.forEach(System.out::println);
+                case 3 -> hotelRooms.forEach(System.out::println);
+                case 4 -> clients.forEach(System.out::println);
+                case 5 -> employees.forEach(System.out::println);
                 case 6 -> addClient();
-                case 7 -> removeClient(Reader.readFirstName(), Reader.readLastName());
+                case 7 ->
+                        removeClient(Reader.readFirstName(), Reader.readLastName());
                 case 8 -> addEmployee();
-                case 9 -> removeEmployee(Reader.readFirstName(), Reader.readLastName());
+                case 9 ->
+                        removeEmployee(Reader.readFirstName(), Reader.readLastName());
                 case 10 -> offerRoom();
                 case 11 -> showOfferedRooms();
                 default -> throw new NoExistChoiceException();
@@ -138,7 +140,6 @@ public class HotelChain implements Menu {
 
     private void addClient() {
         String firstName = Reader.readFirstName();
-
         String lastName = Reader.readLastName();
 
         String personalCode;
@@ -170,12 +171,12 @@ public class HotelChain implements Menu {
             }
         }
 
-        clients.add(new Client(firstName, lastName, personalCode, address, phoneNumber));
+        clients.add(new Client(firstName, lastName, personalCode, address,
+                phoneNumber));
     }
 
     private void addEmployee() {
         String firstName = Reader.readFirstName();
-
         String lastName = Reader.readLastName();
 
         String personalCode;
@@ -213,15 +214,18 @@ public class HotelChain implements Menu {
         System.out.print("Enter the salary: ");
         int salary = ConsoleFunctional.scanner.nextInt();
 
-        employees.add(new Employee(firstName, lastName, personalCode, address, phoneNumber, function, salary));
+        employees.add(new Employee(firstName, lastName, personalCode,
+                address, phoneNumber, function, salary));
     }
 
     private void removeEmployee(String firstName, String lastName) {
-        employees.removeIf(employee -> employee.getFirstName().equals(firstName) && employee.getLastName().equals(lastName));
+        employees.removeIf(employee -> employee.getFirstName().equals(firstName)
+                && employee.getLastName().equals(lastName));
     }
 
     private void removeClient(String firstName, String lastName) {
-        clients.removeIf(client -> client.getFirstName().equals(firstName) && client.getLastName().equals(lastName));
+        clients.removeIf(client -> client.getFirstName().equals(firstName)
+                && client.getLastName().equals(lastName));
     }
 
     private void offerRoom() {
@@ -230,7 +234,8 @@ public class HotelChain implements Menu {
 
     private void showOfferedRooms() {
         for (Hotel hotel : hotels) {
-            System.out.println(ConsoleFunctional.CYAN_BOLD_BRIGHT + hotel.getName() + ConsoleFunctional.RESET);
+            System.out.println(ConsoleFunctional.CYAN_BOLD_BRIGHT
+                    + hotel.getName() + ConsoleFunctional.RESET);
             hotel.showOfferedRooms();
         }
     }
@@ -251,7 +256,8 @@ public class HotelChain implements Menu {
         String firstName = Reader.readFirstName();
         String lastName = Reader.readLastName();
         for (Client client : clients) {
-            if (client.getFirstName().equals(firstName) && client.getLastName().equals(lastName)) {
+            if (client.getFirstName().equals(firstName)
+                    && client.getLastName().equals(lastName)) {
                 return client;
             }
         }

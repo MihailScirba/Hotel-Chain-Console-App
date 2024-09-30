@@ -31,8 +31,8 @@ public class Hotel {
         this.hotelRooms = new ArrayList<>();
     }
 
-    public Hotel(String name, String address, String phoneNumber, String classification,
-                 String type, int score) {
+    public Hotel(String name, String address, String phoneNumber,
+                 String classification, String type, int score) {
         this.name = name;
         this.address = address;
         this.phoneNumber = phoneNumber;
@@ -42,8 +42,9 @@ public class Hotel {
         this.hotelRooms = new ArrayList<>();
     }
 
-    public Hotel(String name, String address, String phoneNumber, String classification,
-                 String type, int score, List<HotelRoom> hotelRooms) {
+    public Hotel(String name, String address, String phoneNumber,
+                 String classification, String type, int score,
+                 List<HotelRoom> hotelRooms) {
         this.name = name;
         this.address = address;
         this.phoneNumber = phoneNumber;
@@ -110,12 +111,14 @@ public class Hotel {
     }
 
     public void showRooms() {
-        System.out.println("Rooms: \n" + hotelRooms.toString().replace("},", "\n"));
+        System.out.println("Rooms: \n" + hotelRooms.toString().replace("},",
+                "\n"));
     }
 
     public void showOfferedRooms() {
         for (HotelRoom hotelRoom : offeredRooms.keySet()) {
-            System.out.println(hotelRoom + "\n\t" + offeredRooms.get(hotelRoom).showInfo() + "\n\n");
+            System.out.println(hotelRoom + "\n\t" + offeredRooms.get(hotelRoom)
+                    .showInfo() + "\n\n");
         }
     }
 
@@ -130,7 +133,8 @@ public class Hotel {
 
         if (offeredRooms.containsKey(hotelRoom)) {
             try {
-                if (checkInDate.isBefore(offeredRooms.get(hotelRoom).getCheckOut())) {
+                if (checkInDate.isBefore(offeredRooms.get(hotelRoom)
+                        .getCheckOut())) {
                     throw new IsOccupiedRoomException();
                 }
                 client.setPeriod(checkInDate, periodDays);
@@ -158,14 +162,20 @@ public class Hotel {
 
     @Override
     public String toString() {
-        return "Hotel{" +
-                "name='" + name + '\'' +
-                ", address='" + address + '\'' +
-                ", phoneNumber='" + phoneNumber + '\'' +
-                ", classification='" + classification + '\'' +
-                ", type='" + type + '\'' +
-                ", score=" + score +
-                ", numberOfRooms: " + hotelRooms.size() +
-                '}';
+        return "Hotel => "
+                + ConsoleFunctional.GREEN_BOLD_BRIGHT + "name = "
+                + ConsoleFunctional.RESET + "{" + name + "}, "
+                + ConsoleFunctional.GREEN_BOLD_BRIGHT + "address = "
+                + ConsoleFunctional.RESET + "{" + address + "}, "
+                + ConsoleFunctional.GREEN_BOLD_BRIGHT + "phoneNumber = "
+                + ConsoleFunctional.RESET + "{" + phoneNumber + "}, "
+                + ConsoleFunctional.GREEN_BOLD_BRIGHT + "classification = "
+                + ConsoleFunctional.RESET + "{" + classification + "}, "
+                + ConsoleFunctional.GREEN_BOLD_BRIGHT + "type = "
+                + ConsoleFunctional.RESET + "{" + type + "}, "
+                + ConsoleFunctional.GREEN_BOLD_BRIGHT + "score = "
+                + ConsoleFunctional.RESET + "{" + score + "}"
+                + ConsoleFunctional.GREEN_BOLD_BRIGHT + "number of rooms = "
+                + ConsoleFunctional.RESET + "{" + hotelRooms.size() + "}";
     }
 }

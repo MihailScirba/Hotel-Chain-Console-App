@@ -1,5 +1,7 @@
 package HotelChain.Hotel;
 
+import HotelChain.Interfaces.ConsoleFunctional;
+
 public class HotelRoom {
     private int orderNumber;
     private int nrRooms;
@@ -22,7 +24,8 @@ public class HotelRoom {
         this.dayPrice = dayPrice;
     }
 
-    public HotelRoom(int orderNumber, int nrRooms, int nrSeats, String comfort, int dayPrice) {
+    public HotelRoom(int orderNumber, int nrRooms, int nrSeats, String comfort,
+                     int dayPrice) {
         this.orderNumber = orderNumber;
         this.nrRooms = nrRooms;
         this.nrSeats = nrSeats;
@@ -72,12 +75,14 @@ public class HotelRoom {
 
     @Override
     public String toString() {
-        return "HotelRoom{" +
-                "orderNumber=" + orderNumber +
-                ", nrRooms=" + nrRooms +
-                ", nrSeats=" + nrSeats +
-                ", comfort='" + comfort + '\'' +
-                ", dayPrice=" + dayPrice +
-                '}';
+        return "Hotel room => "
+                + ConsoleFunctional.GREEN_BOLD_BRIGHT + "order number = "
+                + ConsoleFunctional.RESET + "{" + orderNumber + "}, "
+                + ConsoleFunctional.GREEN_BOLD_BRIGHT + "nr of rooms = "
+                + ConsoleFunctional.RESET + "{" + nrRooms + "}, "
+                + ConsoleFunctional.GREEN_BOLD_BRIGHT + "nr seats = "
+                + ConsoleFunctional.RESET + "{" + nrSeats + "}, "
+                + ConsoleFunctional.GREEN_BOLD_BRIGHT + "day price = "
+                + ConsoleFunctional.RESET + "{" + dayPrice + "}";
     }
 }

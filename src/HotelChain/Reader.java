@@ -32,7 +32,8 @@ public class Reader {
 
     public static void readBranches(List<Branch> branches) {
         try {
-            Scanner scanner = new Scanner(Path.of("src/HotelChain/InputData/Branch.txt"));
+            Scanner scanner = new Scanner(
+                    Path.of("src/HotelChain/InputData/Branch.txt"));
             while (scanner.hasNextLine()) {
                 branches.add(new Branch(
                         scanner.next(),
@@ -42,7 +43,8 @@ public class Reader {
             }
             scanner.close();
             System.out.println(ConsoleFunctional.GREEN_BOLD_BRIGHT +
-                    "File Branch.txt has been read successfully" + ConsoleFunctional.RESET);
+                    "File Branch.txt has been read successfully"
+                    + ConsoleFunctional.RESET);
         } catch (IOException e) {
             e.printStackTrace();
         }
@@ -50,7 +52,8 @@ public class Reader {
 
     public static void readHotels(List<Hotel> hotels) {
         try {
-            Scanner scanner = new Scanner(Path.of("src/HotelChain/InputData/Hotel.txt"));
+            Scanner scanner = new Scanner(
+                    Path.of("src/HotelChain/InputData/Hotel.txt"));
             while (scanner.hasNextLine()) {
                 hotels.add(new Hotel(
                         scanner.next(),
@@ -63,7 +66,8 @@ public class Reader {
             }
             scanner.close();
             System.out.println(ConsoleFunctional.GREEN_BOLD_BRIGHT +
-                    "File Hotel.txt has been read successfully" + ConsoleFunctional.RESET);
+                    "File Hotel.txt has been read successfully"
+                    + ConsoleFunctional.RESET);
         } catch (IOException e) {
             e.printStackTrace();
         }
@@ -76,7 +80,8 @@ public class Reader {
 
     public static void readRooms(List<HotelRoom> hotelRooms) {
         try {
-            Scanner scanner = new Scanner(Path.of("src/HotelChain/InputData/HotelRoom.txt"));
+            Scanner scanner = new Scanner(
+                    Path.of("src/HotelChain/InputData/HotelRoom.txt"));
             while (scanner.hasNextLine()) {
                 hotelRooms.add(new HotelRoom(
                         scanner.nextInt(),
@@ -88,7 +93,8 @@ public class Reader {
             }
             scanner.close();
             System.out.println(ConsoleFunctional.GREEN_BOLD_BRIGHT +
-                    "File HotelRoom.txt has been read successfully" + ConsoleFunctional.RESET);
+                    "File HotelRoom.txt has been read successfully"
+                    + ConsoleFunctional.RESET);
         } catch (IOException e) {
             e.printStackTrace();
         }
@@ -102,7 +108,8 @@ public class Reader {
 
     public static void readEmployee(List<Employee> employees) {
         try {
-            Scanner scanner = new Scanner(Path.of("src/HotelChain/InputData/Employee.txt"));
+            Scanner scanner = new Scanner(
+                    Path.of("src/HotelChain/InputData/Employee.txt"));
             while (scanner.hasNextLine()) {
                 employees.add(new Employee(
                         scanner.next(),
@@ -116,7 +123,8 @@ public class Reader {
             }
             scanner.close();
             System.out.println(ConsoleFunctional.GREEN_BOLD_BRIGHT +
-                    "File Employee.txt has been read successfully" + ConsoleFunctional.RESET);
+                    "File Employee.txt has been read successfully"
+                    + ConsoleFunctional.RESET);
         } catch (IOException e) {
             e.printStackTrace();
         }
@@ -125,7 +133,8 @@ public class Reader {
 
     public static void readClient(List<Client> clients) {
         try {
-            Scanner scanner = new Scanner(Path.of("src/HotelChain/InputData/Client.txt"));
+            Scanner scanner = new Scanner(
+                    Path.of("src/HotelChain/InputData/Client.txt"));
             while (scanner.hasNextLine()) {
                 clients.add(new Client(
                         scanner.next(),
@@ -137,7 +146,8 @@ public class Reader {
             }
             scanner.close();
             System.out.println(ConsoleFunctional.GREEN_BOLD_BRIGHT +
-                    "File Client.txt has been read successfully" + ConsoleFunctional.RESET);
+                    "File Client.txt has been read successfully"
+                    + ConsoleFunctional.RESET);
         } catch (IOException e) {
             e.printStackTrace();
         }
