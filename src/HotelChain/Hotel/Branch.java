@@ -75,6 +75,6 @@ public class Branch {
                 + ConsoleFunctional.GREEN_BOLD_BRIGHT + "phoneNumber = "
                 + ConsoleFunctional.RESET + "{" + phoneNumber + "}, "
                 + ConsoleFunctional.GREEN_BOLD_BRIGHT + "numberOfHotels = "
-                + ConsoleFunctional.RESET + "{" + hotels.size() + "}";
+                + ConsoleFunctional.RESET + "{" + hotels.size() + "}\n";
     }
 }

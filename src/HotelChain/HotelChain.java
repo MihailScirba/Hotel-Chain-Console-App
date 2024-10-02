@@ -241,7 +241,7 @@ public class HotelChain implements Menu {
     }
 
     public Hotel findHotel() {
-        System.out.println(hotels.toString().replace("},", "}\n"));
+        hotels.forEach(System.out::println);
         String name = Reader.readHotelName();
         for (Hotel hotel : hotels) {
             if (hotel.getName().equals(name)) {
@@ -252,7 +252,7 @@ public class HotelChain implements Menu {
     }
 
     private Client findClient() {
-        System.out.println(clients.toString().replace("},", "}\n"));
+        clients.forEach(System.out::println);
         String firstName = Reader.readFirstName();
         String lastName = Reader.readLastName();
         for (Client client : clients) {

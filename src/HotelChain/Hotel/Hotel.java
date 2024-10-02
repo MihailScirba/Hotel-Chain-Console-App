@@ -111,8 +111,8 @@ public class Hotel {
     }
 
     public void showRooms() {
-        System.out.println("Rooms: \n" + hotelRooms.toString().replace("},",
-                "\n"));
+        System.out.println("Rooms");
+        hotelRooms.forEach(System.out::println);
     }
 
     public void showOfferedRooms() {
@@ -170,12 +170,12 @@ public class Hotel {
                 + ConsoleFunctional.GREEN_BOLD_BRIGHT + "phoneNumber = "
                 + ConsoleFunctional.RESET + "{" + phoneNumber + "}, "
                 + ConsoleFunctional.GREEN_BOLD_BRIGHT + "classification = "
-                + ConsoleFunctional.RESET + "{" + classification + "}, "
+                + ConsoleFunctional.RESET + "{" + classification + "},\n\t"
                 + ConsoleFunctional.GREEN_BOLD_BRIGHT + "type = "
                 + ConsoleFunctional.RESET + "{" + type + "}, "
                 + ConsoleFunctional.GREEN_BOLD_BRIGHT + "score = "
                 + ConsoleFunctional.RESET + "{" + score + "}"
                 + ConsoleFunctional.GREEN_BOLD_BRIGHT + "number of rooms = "
-                + ConsoleFunctional.RESET + "{" + hotelRooms.size() + "}";
+                + ConsoleFunctional.RESET + "{" + hotelRooms.size() + "}\n";
     }
 }

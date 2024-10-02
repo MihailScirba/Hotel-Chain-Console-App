@@ -16,6 +16,10 @@
 
 ### **7. [System design](./system-design.md)**
 
+### **8. [Results via screenshots](./result-screenshots.md)**
+
+### **9. [Conclusion](./conclusion.md)**
+
 ---
 
 >It develops a Java application that simulates a chain of hotels whereby users can perform simple Create, Read, Update, and Delete operations on data related to hotel rooms, bookings, guests, etc. Basically, this is some kind of simulated real-life hotel management scenario depicting where to apply both manual and automated processes with the help of elementary concepts of programming.

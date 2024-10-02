@@ -19,10 +19,10 @@ public abstract class Person {
                 + ConsoleFunctional.GREEN_BOLD_BRIGHT + "lastname = "
                 + ConsoleFunctional.RESET + "{" + lastName + "}, "
                 + ConsoleFunctional.GREEN_BOLD_BRIGHT + "personal code = "
-                + ConsoleFunctional.RESET + "{" + personalCode + "}, "
+                + ConsoleFunctional.RESET + "{" + personalCode + "},\n\t"
                 + ConsoleFunctional.GREEN_BOLD_BRIGHT + "home address = "
                 + ConsoleFunctional.RESET + "{" + homeAddress + "}, "
                 + ConsoleFunctional.GREEN_BOLD_BRIGHT + "phone number = "
-                + ConsoleFunctional.RESET + "{" + phoneNumber + "}";
+                + ConsoleFunctional.RESET + "{" + phoneNumber + "}\n";
     }
 }

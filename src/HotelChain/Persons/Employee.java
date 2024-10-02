@@ -104,12 +104,12 @@ public class Employee extends Person {
                 + ConsoleFunctional.GREEN_BOLD_BRIGHT + "lastName = "
                 + ConsoleFunctional.RESET + "{" + lastName + "}, "
                 + ConsoleFunctional.GREEN_BOLD_BRIGHT + "personal code = "
-                + ConsoleFunctional.RESET + "{" + personalCode + "}, "
+                + ConsoleFunctional.RESET + "{" + personalCode + "},\n\t"
                 + ConsoleFunctional.GREEN_BOLD_BRIGHT + "phone number = "
                 + ConsoleFunctional.RESET + "{" + phoneNumber + "}, "
                 + ConsoleFunctional.GREEN_BOLD_BRIGHT + "function = "
                 + ConsoleFunctional.RESET + "{" + function + "}, "
                 + ConsoleFunctional.GREEN_BOLD_BRIGHT + "salary = "
-                + ConsoleFunctional.RESET + "{" + salary + "}";
+                + ConsoleFunctional.RESET + "{" + salary + "}\n";
     }
 }

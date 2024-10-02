@@ -16,6 +16,10 @@
 
 ### **7. [System design](./system-design.md)**
 
+### **8. [Results via screenshots](./result-screenshots.md)**
+
+### **9. [Conclusion](./conclusion.md)**
+
 ---
 
 ## Technologies used

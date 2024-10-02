@@ -83,6 +83,6 @@ public class HotelRoom {
                 + ConsoleFunctional.GREEN_BOLD_BRIGHT + "nr seats = "
                 + ConsoleFunctional.RESET + "{" + nrSeats + "}, "
                 + ConsoleFunctional.GREEN_BOLD_BRIGHT + "day price = "
-                + ConsoleFunctional.RESET + "{" + dayPrice + "}";
+                + ConsoleFunctional.RESET + "{" + dayPrice + "}\n";
     }
 }
